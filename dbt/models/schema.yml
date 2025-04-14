@@ -1,0 +1,58 @@
+
+version: 2
+
+models:
+  - name: Abrechnung_Positionen
+    description: "Positions"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+      - name: ReId
+      - name: KdNr
+      - name: Nettobetrag
+      - name: Bildnummer
+      - name: VerDatum
+  - name: Abrechnung_Rechnungen
+    columns:
+      - name: ReNummer
+        description: "Primary key"
+        data_tests: 
+          - unique
+          - not_null
+      - name: SummeNetto
+      - name: MwStSatz
+        data_tests: 
+          - not_null
+      - name: ZahlungsbetragBrutto
+      - name: KdNr
+      - name: Summenebenkosten
+      - name: ReDatum
+        data_tests: 
+          - not_null
+      - name: Zahlungsdatum
+      - name: Payment_state
+  - name: Abrechnung_Positionen_Placeholder
+    description: "Positions Placeholder"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+      - name: ReId
+      - name: KdNr
+      - name: Nettobetrag
+      - name: Bildnummer
+      - name: VerDatum
+  - name: Error_Logs
+    columns:
+      - name: Error_Message
+      - name: Error_Date
+      - name: Table_Name
+      - name: Record_ID 
+  
+
+  

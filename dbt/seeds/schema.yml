@@ -1,0 +1,48 @@
+
+version: 2
+
+seeds:
+  - name: Staging_Abrechnung_Positionen
+    description: "Positions"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+      - name: ReId
+      - name: KdNr
+      - name: Nettobetrag
+      - name: Bildnummer
+      - name: VerDatum
+  - name: Staging_Abrechnung_Rechnungen
+    columns:
+      - name: ReNummer
+        description: "Primary key"
+        data_tests: 
+          - unique
+          - not_null
+      - name: SummeNetto
+      - name: MwStSatz
+        data_tests: 
+          - not_null
+      - name: ZahlungsbetragBrutto
+      - name: KdNr
+      - name: Summenebenkosten
+      - name: ReDatum
+        data_tests: 
+          - not_null
+      - name: Zahlungsdatum
+  - name: Staging_Abrechnung_Kunden
+    columns: 
+      - name: id
+        description: "client primary key"
+        data_tests:
+          - unique
+          - not_null
+      - name: Kdnr
+      - name: Verlagsname
+      - name: Region
+  
+
+  

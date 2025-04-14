@@ -1,0 +1,65 @@
+[0m14:17:55.627896 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd40fa2bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd4020b560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd3fa4a0f0>]}
+
+
+============================== 14:17:55.679763 | 94867406-2d9c-41cf-a031-b61312cd3793 ==============================
+[0m14:17:55.679763 [info ] [MainThread]: Running with dbt=1.9.4
+[0m14:17:55.701816 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt debug --profiles-dir /opt/airflow/dbt', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:17:55.943610 [info ] [MainThread]: dbt version: 1.9.4
+[0m14:17:55.945375 [info ] [MainThread]: python version: 3.12.9
+[0m14:17:55.950302 [info ] [MainThread]: python path: /home/airflow/.local/bin/python
+[0m14:17:55.957462 [info ] [MainThread]: os info: Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[0m14:18:02.488528 [info ] [MainThread]: Using profiles dir at /opt/airflow/dbt
+[0m14:18:02.492611 [info ] [MainThread]: Using profiles.yml file at /opt/airflow/dbt/profiles.yml
+[0m14:18:02.494787 [info ] [MainThread]: Using dbt_project.yml file at /opt/airflow/dbt_project.yml
+[0m14:18:02.497893 [info ] [MainThread]: adapter type: snowflake
+[0m14:18:02.503225 [info ] [MainThread]: adapter version: 1.9.2
+[0m14:18:02.505801 [info ] [MainThread]: Configuration:
+[0m14:18:02.508922 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m14:18:02.511841 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m14:18:02.514802 [info ] [MainThread]: Required dependencies:
+[0m14:18:02.529263 [debug] [MainThread]: Executing "git --help"
+[0m14:18:02.541925 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m14:18:02.544692 [info ] [MainThread]: Connection:
+[0m14:18:02.548673 [info ] [MainThread]:   account: EQPZGMR-KN22817
+[0m14:18:02.555586 [info ] [MainThread]:   user: FERDINANDODP
+[0m14:18:02.557823 [info ] [MainThread]:   database: IMAGO
+[0m14:18:02.560067 [info ] [MainThread]:   warehouse: IMAGO_MIGRATION
+[0m14:18:02.563989 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m14:18:02.565659 [info ] [MainThread]:   schema: dbo
+[0m14:18:02.574103 [info ] [MainThread]:   authenticator: None
+[0m14:18:02.576214 [info ] [MainThread]:   oauth_client_id: None
+[0m14:18:02.578378 [info ] [MainThread]:   query_tag: None
+[0m14:18:02.580691 [info ] [MainThread]:   client_session_keep_alive: False
+[0m14:18:02.593708 [info ] [MainThread]:   host: None
+[0m14:18:02.596297 [info ] [MainThread]:   port: None
+[0m14:18:02.605617 [info ] [MainThread]:   proxy_host: None
+[0m14:18:02.608471 [info ] [MainThread]:   proxy_port: None
+[0m14:18:02.610486 [info ] [MainThread]:   protocol: None
+[0m14:18:02.612609 [info ] [MainThread]:   connect_retries: 1
+[0m14:18:02.616079 [info ] [MainThread]:   connect_timeout: None
+[0m14:18:02.621106 [info ] [MainThread]:   retry_on_database_errors: False
+[0m14:18:02.623479 [info ] [MainThread]:   retry_all: False
+[0m14:18:02.630043 [info ] [MainThread]:   insecure_mode: False
+[0m14:18:02.632270 [info ] [MainThread]:   reuse_connections: True
+[0m14:18:02.638370 [info ] [MainThread]: Registered adapter: snowflake=1.9.2
+[0m14:18:03.415643 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m14:18:03.891070 [debug] [MainThread]: Using snowflake connection "debug"
+[0m14:18:03.896221 [debug] [MainThread]: On debug: select 1 as id
+[0m14:18:03.898023 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:18:09.271168 [debug] [MainThread]: SQL status: SUCCESS 1 in 5.373 seconds
+[0m14:18:09.313996 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m14:18:09.352165 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m14:18:09.355123 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </opt/airflow/dbt_project.yml> not found
+
+[0m14:18:09.357526 [info ] [MainThread]: Error from git --help: User does not have permissions for this command: "git"
+
+[0m14:18:09.364813 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 14.051652, "process_in_blocks": "10848", "process_kernel_time": 5.998785, "process_mem_max_rss": "213828", "process_out_blocks": "2912", "process_user_time": 13.261529}
+[0m14:18:09.367152 [debug] [MainThread]: Command `dbt debug` failed at 14:18:09.366724 after 14.05 seconds
+[0m14:18:09.368966 [debug] [MainThread]: Connection 'debug' was left open.
+[0m14:18:09.371831 [debug] [MainThread]: On debug: Close
+[0m14:18:10.060616 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd3f6a48f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd2dd58aa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd27df38f0>]}
+[0m14:18:10.082867 [debug] [MainThread]: Flushing usage events
+[0m14:18:11.519052 [debug] [MainThread]: An error was encountered while trying to flush usage events
